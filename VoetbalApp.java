@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class VoetbalApp {
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		
 		VoetbalBond knvb = new VoetbalBond();
 		knvb.seizoenAfdraaien();
