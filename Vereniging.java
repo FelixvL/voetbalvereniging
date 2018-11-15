@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Vereniging {
 	ArrayList<Lid> leden = new ArrayList();
+	int aantalBezoekersInStadion;
+	String naam;
 	
 	void toonAlleLeden() {
 		for(Lid lid : leden) {
