@@ -8,5 +8,10 @@ public class Maffia  {
 	
 	void recruteren(Omkoopbaar okb) {
 		omkoopbaren.add(okb);
+		try {
+			okb.omkopen(3, "geef geld");
+		}catch(Exception e) {
+			System.out.println("Doodschieten");
+		}
 	}
 }
