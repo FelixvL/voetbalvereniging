@@ -19,6 +19,6 @@ public class VoetbalBond {
 		}
 		System.out.println(ajax.kasInhoud);
 		System.out.println(feyenoord.kasInhoud);
-		new Maffia().recruteren(((Speler) ajax.leden.get(0)));
+		//new Maffia().recruteren(((Speler) ajax.leden.get(0)));
 	}
 }
