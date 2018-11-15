@@ -2,6 +2,8 @@ package voetbalvereniging.wedstrijd;
 
 import java.util.Random;
 
+import voetbalvereniging.Lid;
+import voetbalvereniging.Speler;
 import voetbalvereniging.Vereniging;
 
 public class Wedstrijd {
@@ -19,6 +21,9 @@ public class Wedstrijd {
 	}
 
 	public void spelen() throws Exception{
+		if(checkCorruptie()) {
+			System.out.println("Live Alert");
+		}
 		if (per == 0) {
 			throw new WedstrijdNietKunnenAfmakenException("Wedstrijd niet kunnen afmaken");
 		}
@@ -36,6 +41,29 @@ public class Wedstrijd {
 		uitbetalen(winnaar, teVerdelen);
 	}
 
+	boolean checkCorruptie() {
+		System.out.println("jojo check corruptie");
+		for(int x = 0; x < thuisClub.leden.size(); x++) {
+			Lid lid = thuisClub.leden.get(x);
+			if(lid instanceof Speler) {
+				Speler speler = (Speler)lid;
+				if(speler.omgekocht) {
+					return true;
+				}
+			}
+		}
+		for(int x = 0; x < uitClub.leden.size(); x++) {
+			Lid lid = uitClub.leden.get(x);
+			if(lid instanceof Speler) {
+				Speler speler = (Speler)lid;
+				if(speler.omgekocht) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
 	public Vereniging bepaalWinnaar() {
 		if (doelpuntenThuisclub > doelpuntenUitclub) {
 			return thuisClub;
