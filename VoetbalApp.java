@@ -13,12 +13,14 @@ public class VoetbalApp {
 		vereniging1.toonKasInhoud();
 		vereniging1.wedstrijdSpelen(20);
 		vereniging1.toonKasInhoud();
+//		vereniging1.toonSalaris();
+		System.out.println(vereniging1.toonSalaris());
 	}
 	static ArrayList<Lid> genereerLeden(){
 		ArrayList<Lid> leden = new ArrayList();
 		leden.add(new AmateurSpeler("Frits", 2));
-		leden.add(new ProfSpeler("Joost"));
-		leden.add(new ProfSpeler("Jan"));
+		leden.add(new ProfSpeler("Joost", 100));
+		leden.add(new ProfSpeler("Jan", 200));
 		leden.add(new AmateurSpeler("Marian", 1));		
 		return leden;
 	}
