@@ -3,11 +3,12 @@ package voetbalvereniging;
 import java.util.ArrayList;
 
 public class Vereniging {
-	ArrayList<Lid> leden = new ArrayList();
-	int aantalBezoekersInStadion;
-	String naam;
-	int hoogteContributiePerMaand;
-	int kasInhoud;
+	public ArrayList<Lid> leden = new ArrayList();
+	public int aantalBezoekersInStadion;
+	public String naam;
+	public int hoogteContributiePerMaand;
+	public int kasInhoud;
+	public int stadionKosten;
 
 	void toonAlleLeden() {
 		for (Lid lid : leden) {
@@ -25,10 +26,11 @@ public class Vereniging {
 		return totaal;
 	}
 
-	Vereniging(String naam, int stadionCapaciteit, int contributie) {
+	Vereniging(String naam, int stadionCapaciteit, int contributie, int stadionKosten) {
 		this.naam = naam;
 		aantalBezoekersInStadion = stadionCapaciteit;
 		hoogteContributiePerMaand = contributie;
+		this.stadionKosten = stadionKosten;
 
 	}
 
