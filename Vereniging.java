@@ -43,4 +43,13 @@ public class Vereniging {
 		System.out.println("Het totaal is dus: " + (kasInhoud + berekenContributieSchuld()));
 		return kasInhoud;
 	}
+	int toonSalaris() {
+		int salarisTotaal = 0;
+		for (Lid lid : leden) {
+			if (lid instanceof ProfSpeler) {
+				salarisTotaal = salarisTotaal + ((ProfSpeler) lid).salaris;
+			}	
+		}
+		return salarisTotaal;
+	}
 }
