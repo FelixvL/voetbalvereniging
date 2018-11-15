@@ -16,10 +16,10 @@ public class VoetbalApp {
 	}
 	static ArrayList<Lid> genereerLeden(){
 		ArrayList<Lid> leden = new ArrayList();
-		leden.add(new Speler("Frits", 2));
-		leden.add(new Speler("Joost", 2));
-		leden.add(new Speler("Jan", 3));
-		leden.add(new Speler("Marian", 1));		
+		leden.add(new AmateurSpeler("Frits", 2));
+		leden.add(new ProfSpeler("Joost"));
+		leden.add(new ProfSpeler("Jan"));
+		leden.add(new AmateurSpeler("Marian", 1));		
 		return leden;
 	}
 }
