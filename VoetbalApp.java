@@ -6,9 +6,13 @@ public class VoetbalApp {
 
 	public static void main(String[] args) {
 		System.out.println(">");
-		Vereniging vereniging1 = new Vereniging();
+		Vereniging vereniging1 = new Vereniging("Feyenoord", 57_000, 10);
 		vereniging1.leden = genereerLeden();
-		vereniging1.toonAlleLeden();
+		vereniging1.wedstrijdSpelen(33);
+		System.out.println("De contributieSchuld is "+vereniging1.berekenContributieSchuld());
+		vereniging1.toonKasInhoud();
+		vereniging1.wedstrijdSpelen(20);
+		vereniging1.toonKasInhoud();
 	}
 	static ArrayList<Lid> genereerLeden(){
 		ArrayList<Lid> leden = new ArrayList();
